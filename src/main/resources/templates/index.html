@@ -2,9 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-   Yet so
+<div class="container-fluid vh-100 d-flex justify-content-center align-items-center" style="background-image: url('/img/background.jpg'); background-size: cover; background-position: center;">
+    <div class="card shadow-lg p-5" style="width: 100%; max-width: 400px; background-color: rgba(255, 255, 255, 0.9);">
+        <div class="text-center mb-4">
+            <img src="/img/logo2.jpg" alt="Logo" class="img-fluid" style="max-height: 100px;">
+        </div>
+        <div id="login-form">
+            <form>
+                <div class="form-group mb-2">
+                    <label for="phone"></label>
+                    <input type="text" class="form-control underline-input text-dark" id="phone" placeholder="Nhập số điện thoại của bạn">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="password"></label>
+                    <input type="password" class="form-control underline-input text-dark" id="password" placeholder="Nhập mật khẩu của bạn">
+                </div>
+                <div class="form-group mb-2 d-flex justify-content-between align-items-center">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="remember-me">
+                        <label class="form-check-label text-warning" for="remember-me">Remember Me</label>
+                    </div>
+                    <a href="#forgot-password-form" class="text-blue" onclick="toggleForms(event, 'forgot-password-form')">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="btn btn-warning btn-block">ĐĂNG NHẬP</button>
+                <div class="text-center mt-3">
+                    <p class="mb-0">Bạn chưa có tài khoản? <a href="#register-form" onclick="toggleForms(event, 'register-form')">Tạo tài khoản</a></p>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#">Quay lại màn hình chính</a>
+                </div>
+            </form>
+        </div>
+        <div id="register-form" style="display: none;">
+            <form>
+                <div class="form-group mb-2">
+                    <label for="reg-phone"></label>
+                    <input type="text" class="form-control underline-input text-dark" id="reg-phone" placeholder="Nhập số điện thoại của bạn">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="reg-password"></label>
+                    <input type="password" class="form-control underline-input text-dark" id="reg-password" placeholder="Nhập mật khẩu của bạn">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="reg-confirm-password"></label>
+                    <input type="password" class="form-control underline-input text-dark" id="reg-confirm-password" placeholder="Xác nhận mật khẩu của bạn">
+                </div>
+                <button type="submit" class="btn btn-warning btn-block">ĐĂNG KÝ</button>
+                <div class="text-center mt-3">
+                    <p class="mb-0">Đã có tài khoản? <a href="#login-form" onclick="toggleForms(event, 'login-form')">Đăng nhập</a></p>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#">Quay lại màn hình chính</a>
+                </div>
+            </form>
+        </div>
+        <div id="forgot-password-form" style="display: none;">
+            <form>
+                <div class="form-group mb-2">
+                    <label for="forgot-phone"></label>
+                    <input type="text" class="form-control underline-input text-dark" id="forgot-phone" placeholder="Nhập số điện thoại của bạn">
+                </div>
+                <button type="submit" class="btn btn-warning btn-block">LẤY LẠI MẬT KHẨU</button>
+                <div class="text-center mt-3">
+                    <p class="mb-0"><a href="#login-form" onclick="toggleForms(event, 'login-form')">Đăng nhập</a></p>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#">Quay lại màn hình chính</a>
+                </div>
+            </form>
+        </div>
+        <div class="mt-4">
+            <img src="/img/promotion.jpg" alt="Promotion" class="img-fluid promo-image">
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

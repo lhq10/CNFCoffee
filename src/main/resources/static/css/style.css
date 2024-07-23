@@ -1,0 +1,45 @@
+body {
+    color: #000000; /* Đổi màu chữ thành màu đen */
+    font-family: Barlow;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-fluid {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.btn-warning {
+    background: #d8b979;
+    color: #ffffff;
+    margin-top: 24px;
+    font-size: 14px;
+    overflow: visible;
+    min-height: 42px;
+    height: auto;
+    display: flex;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+.btn-warning:hover {
+    background: none;
+    color: inherit;
+    box-shadow: none;
+}
